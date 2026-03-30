@@ -1,3 +1,150 @@
-<h1>
-    Welcome to my Home Page
-</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student ML App</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background: linear-gradient(to right, #eef2f3, #dfe9f3);
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 18px;
+    color: gray;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">🎓 Student ML App</a>
+    <div>
+      <a class="btn btn-light me-2" href="/predict">Predict</a>
+      <a class="btn btn-light" href="/dashboard">Dashboard</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>🎓 Student Performance Predictor</h1>
+    <p>AI-powered system to predict and analyze student performance</p>
+
+    <a href="/predict" class="btn btn-primary btn-lg mt-3">🚀 Try Prediction</a>
+</div>
+
+<!-- FEATURES -->
+<div class="container mt-5">
+
+<h3 class="text-center mb-4">✨ Features</h3>
+
+<!-- HORIZONTAL CARDS -->
+<div class="row text-center">
+
+  <div class="col-md-4">
+    <div class="card p-4" data-bs-toggle="collapse" data-bs-target="#predictionInfo" style="cursor:pointer;">
+      <h4>📊 Smart Prediction</h4>
+      <p>Click to explore</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card p-4" data-bs-toggle="collapse" data-bs-target="#analyticsInfo" style="cursor:pointer;">
+      <h4>📈 Analytics Dashboard</h4>
+      <p>Click to explore</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card p-4" data-bs-toggle="collapse" data-bs-target="#aiInfo" style="cursor:pointer;">
+      <h4>🧠 AI Insights</h4>
+      <p>Click to explore</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ACCORDION CONTENT -->
+<div class="accordion mt-4" id="featureAccordion">
+
+  <!-- SMART PREDICTION -->
+  <div id="predictionInfo" class="accordion-collapse collapse show" data-bs-parent="#featureAccordion">
+    <div class="card p-4 mb-3">
+      <h5>📊 Smart Prediction</h5>
+      <p>
+        This feature uses a trained machine learning model to predict student math scores 
+        based on input features like reading score, writing score, parental education, and more.
+      </p>
+      <p>👉 Helps teachers and students understand expected performance.</p>
+    </div>
+  </div>
+
+  <!-- ANALYTICS -->
+  <div id="analyticsInfo" class="accordion-collapse collapse" data-bs-parent="#featureAccordion">
+    <div class="card p-4 mb-3">
+      <h5>📈 Analytics Dashboard</h5>
+      <p>
+        The dashboard provides insights such as average scores, highest and lowest performance, 
+        and trends over time using interactive charts.
+      </p>
+      <p>👉 Helps in decision making and performance tracking.</p>
+    </div>
+  </div>
+
+  <!-- AI INSIGHTS -->
+  <div id="aiInfo" class="accordion-collapse collapse" data-bs-parent="#featureAccordion">
+    <div class="card p-4 mb-3">
+      <h5>🧠 AI Insights</h5>
+      <ul>
+        <li>Excellent Performance 🎉</li>
+        <li>Average Performance 👍</li>
+        <li>Needs Improvement ⚠️</li>
+      </ul>
+      <p>👉 Helps students improve learning strategies.</p>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<!-- DASHBOARD PREVIEW -->
+<div class="container mt-5">
+<div class="card p-4 text-center">
+    <h4>📊 Explore Your Data</h4>
+    <p>Go to dashboard to visualize predictions and insights.</p>
+    <a href="/dashboard" class="btn btn-success">Go to Dashboard</a>
+</div>
+</div>
+
+<!-- REQUIRED JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
