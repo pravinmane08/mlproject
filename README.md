@@ -62,7 +62,6 @@ This project combines **Machine Learning, Flask, and Data Visualization** to:
 | Database | SQLite |
 
 ---
----
 
 ## 🏗️ System Architecture
 
@@ -91,6 +90,8 @@ Database Layer (SQLite - students.db)
       │
       ▼
 Analytics Dashboard (Chart.js Visualizations)
+
+---
 
 ## 📁 Project Structure
 
