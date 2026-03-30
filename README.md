@@ -64,3 +64,21 @@ This project uses **Machine Learning + Flask + Data Visualization** to:
 ---
 
 ## 📁 Project Structure
+mlproject/
+│
+├── app/
+│   ├── routes.py
+│   ├── db.py
+│
+├── templates/
+├── static/
+├── src/
+├── artifacts/
+├── data/
+├── notebooks/
+├── config/
+│
+├── run.py
+├── students.db
+├── requirements.txt
+└── README.md
