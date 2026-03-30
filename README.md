@@ -62,6 +62,35 @@ This project combines **Machine Learning, Flask, and Data Visualization** to:
 | Database | SQLite |
 
 ---
+---
+
+## 🏗️ System Architecture
+
+```text
+User (Browser)
+      │
+      ▼
+Frontend (HTML + Bootstrap + JavaScript)
+      │
+      ▼
+Flask Application (app/)
+      │
+      ├── Routes Layer (routes.py)
+      │       │
+      │       ▼
+      │   ML Prediction Pipeline (src/pipeline)
+      │       │
+      │       ▼
+      │   Data Preprocessing (preprocessor.pkl)
+      │       │
+      │       ▼
+      │   Trained ML Model (model.pkl)
+      │
+      ▼
+Database Layer (SQLite - students.db)
+      │
+      ▼
+Analytics Dashboard (Chart.js Visualizations)
 
 ## 📁 Project Structure
 
