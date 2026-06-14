@@ -1,18 +1,26 @@
 import logging
 import os
 from datetime import datetime
+from logging.handlers import RotatingFileHandler
 
-LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
+# Create only logs directory
+LOG_DIR = os.path.join(os.getcwd(), "logs")
 
-logs_path = os.path.join(os.getcwd(), "logs",LOG_FILE)
-os.makedirs(logs_path, exist_ok=True)
+os.makedirs(LOG_DIR, exist_ok=True)
 
-LOG_FILE_PATH = os.path.join(logs_path, LOG_FILE)
+# Single log file
+LOG_FILE = "app.log"
 
+LOG_FILE_PATH = os.path.join(LOG_DIR, LOG_FILE)
 
-logging.basicConfig(
-    filename=LOG_FILE_PATH,
-    format="[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",
-    level=logging.INFO,
+handler = RotatingFileHandler(
+    LOG_FILE_PATH,
+    maxBytes=5 * 1024 * 1024,
+    backupCount=3
 )
 
+logging.basicConfig(
+    handlers=[handler],
+    level=logging.INFO,
+    format="[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s"
+)
